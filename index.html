@@ -1,0 +1,47 @@
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+ORDER BY team_name, firstname
+
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+ORDER BY team_name, role
+
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+ORDER BY firstname
+
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+ORDER BY lastname
+
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+WHERE player.role = 'seeker'
+ORDER BY firstname
+
+select wizard.firstname, wizard.lastname, player.role, team.name as team_name
+FROM wizard
+INNER JOIN player ON wizard.id = player.wizard_id
+INNER JOIN team ON team.id = player.team_id
+WHERE player.role = 'seeker'
+ORDER BY lastname
+
+select wizard.firstname, wizard.lastname, player.role
+FROM wizard
+LEFT OUTER JOIN player ON wizard.id = player.wizard_id
+WHERE player.role IS NULL
